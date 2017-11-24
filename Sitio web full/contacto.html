@@ -1,0 +1,120 @@
+<!doctype html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>LoQueTeGustaRadio</title>
+
+
+<link rel="stylesheet" href="css/reset.css" type="text/css" />
+<link rel="stylesheet" href="css/styles.css" type="text/css" />
+<link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+
+
+<script type="text/javascript">
+    function sendMail() {
+      var link = "contactojosegutierrez@gmail.com"
+        + "?cc=ConsultaRadio"
+        + "&subject=" + escape("Info Web")
+        + "&body=" + escape("Mi nombre es: " + document.getElementById('name').value);
+
+      var n = document.forms[0].name.value;
+      var m = document.forms[0].mail.value;
+      var t = document.getElementById("test");
+      var filter = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,8})+$/;
+      if (n.length >= 2 && filter.test(m)) { window.location.href = "mailto:" + link; return true; }
+      else { t.innerHTML = "Revisa los datos . . ."; setTimeout(function () { t.innerHTML = ". . ." }, 2000); return false; }
+    }
+
+</script>
+
+<meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0" />
+
+<!--
+deiform, a free CSS web template by ZyPOP (zypopwebtemplates.com/)
+
+Download: http://zypopwebtemplates.com/
+
+License: Creative Commons Attribution
+//-->
+</head>
+<body>
+<div id="container" class="width">
+
+    <header> 
+	<div>
+
+    		<h1><a href="index.html">LoQueTeGusta</a></h1>
+
+		<nav>
+	
+    			<ul class="sf-menu dropdown">
+
+			
+        			<li><a href="index.html">Inicio</a></li>
+
+                    <li>
+
+					<a>Ranking</a>
+            			
+					<ul>
+                				<li><a href="nacional.html">Nacional</a></li>
+						<li><a href="global.html">Global</a></li>
+                			</ul>
+
+            			</li>
+		            
+				<li class="selected"><a href="contacto.html">Contacto</a></li>
+                
+       			</ul>
+
+			
+			<div class="clear"></div>
+    		</nav>
+       	</div>
+
+	<div class="clear"></div>
+
+       
+    </header>
+
+
+    <div id="intro">
+
+      
+		<div class="intro-content intro-content-short">
+	
+                   <br></br>
+                   
+            	</div>
+    
+
+	</div>
+    <center>
+    <div id="body">
+      
+
+
+
+		<section id="content" class="three-column">
+
+	    <article>
+                <center>
+                        <h1>CONTACTANOS</h1>
+                        <h2>099689147</h2>
+                        <h2>contactojosegutierrez@gmail.com</h2>
+                 </center> 
+                 <br></br>
+                <form>
+                        <label for="name">Tu Nombre</label>
+                        <input type="text" id="name" name="name" value="">
+                        <label for="telf">Tu Correo</label>
+                        <input type="text" id="mail" name="mail" value="">
+                        <label for="test" id="test">. . .</label>
+                        <input type="button" value="CONTACTAME" onclick="sendMail();this.blur()">
+                      </form>
+                      <br></br>
+                    
+        </article>
+
+</body>
+</html>
